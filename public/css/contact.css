@@ -34,7 +34,10 @@
 }
 
 .contact-item div {
-  flex: 1;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .contact-item h3 {

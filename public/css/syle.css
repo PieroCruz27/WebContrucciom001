@@ -20,18 +20,23 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  /* FIX: Prevenir overflow horizontal */
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--text-color);
   line-height: 1.6;
+  /* FIX: Prevenir overflow horizontal */
   overflow-x: hidden;
   background-color: var(--light-text);
+  width: 100%;
+  min-width: 320px; /* Ancho mínimo para móviles muy pequeños */
 }
 
 img {
