@@ -1,0 +1,251 @@
+/* Global Styles */
+:root {
+  --primary-color: #9E1A1A;
+  --primary-dark: #7E1515;
+  --primary-light: #C73232;
+  --secondary-color: #333333;
+  --accent-color: #F5F5F5;
+  --text-color: #333333;
+  --light-text: #FFFFFF;
+  --grey-light: #F5F5F5;
+  --grey-medium: #E0E0E0;
+  --grey-dark: #888888;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: var(--light-text);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  color: var(--light-text);
+}
+
+.section {
+  padding: 100px 0;
+  background-color: var(--light-text);
+  color: var(--text-color);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  transform: translateX(-50%);
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--grey-dark);
+  margin-bottom: 3rem;
+}
+
+.bg-light {
+  background-color: var(--grey-light);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated {
+  opacity: 0;
+}
+
+.fadeIn {
+  animation: fadeIn 1s forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25D366;
+  color: var(--light-text);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  color: var(--light-text);
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+  padding: 50px 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-small {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.footer-links ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-links li {
+  margin: 0 15px 10px 0;
+}
+
+.footer-links a {
+  color: var(--light-text);
+}
+
+.footer-links a:hover {
+  color: var(--primary-light);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+/* Reveal animations on scroll */
+.reveal {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+
+.from-left {
+  transform: translateX(-50px);
+}
+
+.from-right {
+  transform: translateX(50px);
+}
+
+.from-left.active, .from-right.active {
+  transform: translateX(0);
+}
+
+.from-bottom {
+  transform: translateY(50px);
+}
+
+.from-bottom.active {
+  transform: translateY(0);
+}
