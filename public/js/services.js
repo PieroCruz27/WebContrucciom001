@@ -1,6 +1,6 @@
 // WhatsApp service buttons
 const serviceCards = document.querySelectorAll('.service-card');
-const whatsappNumber = '51912345678'; // Replace with actual number
+const whatsappNumber = '51967483414'; // Replace with actual number
 
 // Add click event to service cards
 serviceCards.forEach(card => {
